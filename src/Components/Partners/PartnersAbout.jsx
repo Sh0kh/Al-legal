@@ -56,7 +56,7 @@ export default function PartnersAbout() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Strategic <span className="text-red-600">Partnerships</span>
+              Strategic <span className="text-amber-600">Partnerships</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our carefully selected partnerships enable us to provide comprehensive legal services 
@@ -99,7 +99,7 @@ export default function PartnersAbout() {
             className="mb-12"
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Partners</h3>
-            <div className="w-16 h-1 bg-red-600"></div>
+            <div className="w-16 h-1 bg-amber-600"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -127,7 +127,7 @@ export default function PartnersAbout() {
 
                   <div className="text-center mb-6">
                     <h4 className="text-xl font-bold text-gray-900 mb-2">{partner.name}</h4>
-                    <span className="inline-block bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium mb-2">
+                    <span className="inline-block bg-amber-100 text-amber-600 px-3 py-1 rounded-full text-sm font-medium mb-2">
                       {partner.category}
                     </span>
                     <p className="text-gray-600 text-sm leading-relaxed">{partner.description}</p>
@@ -167,7 +167,7 @@ export default function PartnersAbout() {
 function StatCard({ value, label }) {
   return (
     <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
-      <div className="text-3xl font-bold text-red-600 mb-2">{value}</div>
+      <div className="text-3xl font-bold text-amber-600 mb-2">{value}</div>
       <div className="text-gray-600">{label}</div>
     </div>
   );

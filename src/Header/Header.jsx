@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
@@ -7,8 +7,6 @@ import logo from './logo.jpg';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
-  const lastScrollY = useRef(0);
 
   const navItems = [
     { name: 'About', hasDropdown: false, path: 'aboutus' },
@@ -18,29 +16,13 @@ export default function Header() {
     { name: 'Contact', hasDropdown: false, path: 'contact' },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setShowHeader(!(currentScrollY > lastScrollY.current && currentScrollY > 100));
-      lastScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <>
-      <motion.div
-        initial={{ y: 0, opacity: 1 }}
-        animate={showHeader ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
-        transition={{ duration: 0.4 }}
-        className="fixed top-6 left-0 right-0 z-[900] w-full px-4"
-      >
+      <div className="fixed top-6 left-0 right-0 z-[900] w-full px-4">
         <div className="flex justify-center">
-          <header className="bg-white rounded-xl shadow-xl border border-gray-200 w-full max-w-6xl">
+          <header className="bg-white rounded-xl shadow-xl border border-gray-200 w-full max-w-7xl">
             <div className="px-6 lg:px-10">
               <div className="flex justify-between items-center h-20">
                 <NavLink to="/">
@@ -52,7 +34,7 @@ export default function Header() {
                       whileHover={{ rotate: 10, scale: 1.1 }}
                     />
                     <div className="flex items-center space-x-3">
-                      <div className="w-1 h-10 bg-red-600"></div>
+                      <div className="w-1 h-10 bg-amber-600"></div>
                       <div className='medik435'>
                         <div className="text-xl font-semibold text-gray-900">AllLegal</div>
                         <div className="text-sm text-gray-600 -mt-1">Uzbekistan</div>
@@ -80,7 +62,7 @@ export default function Header() {
                     <ChevronDown className="w-4 h-4 text-gray-500" />
                   </div>
 
-                  <button className="medik435 bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-md text-base font-medium">
+                  <button className="medik435 bg-amber-700 hover:bg-amber-800 text-white px-6 py-2 rounded-md text-base font-medium">
                     Contacts
                   </button>
 
@@ -92,13 +74,13 @@ export default function Header() {
             </div>
           </header>
         </div>
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {isMenuOpen && (
           <>
             <motion.div
-              className="fixed inset-0  bg-black bg-opacity-60 z-[999]"
+              className="fixed inset-0 bg-black bg-opacity-60 z-[999]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -106,7 +88,7 @@ export default function Header() {
             />
 
             <motion.div
-              className="fixed top-0 left-0 h-full  w-1/2  bg-white shadow-2xl z-[1000] flex flex-col p-6"
+              className="fixed top-0 left-0 h-full w-1/2 bg-white shadow-2xl z-[1000] flex flex-col p-6"
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
@@ -129,7 +111,7 @@ export default function Header() {
                   <NavLink
                     key={item.name}
                     to={`/${item.path}`}
-                    className="text-gray-800 text-lg hover:text-red-700 transition"
+                    className="text-gray-800 text-lg hover:text-amber-700 transition"
                     onClick={closeMenu}
                   >
                     {item.name}
@@ -145,7 +127,7 @@ export default function Header() {
                     <ChevronDown className="w-4 h-4 text-gray-500" />
                   </div>
                 </div>
-                <button className="w-full bg-red-700 hover:bg-red-800 text-white py-2 rounded-md text-base font-medium transition">
+                <button className="w-full bg-amber-700 hover:bg-amber-800 text-white py-2 rounded-md text-base font-medium transition">
                   Contacts
                 </button>
               </div>

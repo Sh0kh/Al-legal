@@ -56,7 +56,7 @@ export default function ProjectsHome() {
           className="text-left mb-16"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Projects</h1>
-          <div className="w-24 h-1 bg-red-600 mb-8"></div>
+          <div className="w-24 h-1 bg-amber-600 mb-8"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -71,7 +71,6 @@ export default function ProjectsHome() {
               className="group"
             >
               <div className="h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white border border-gray-100 flex flex-col">
-                {/* Image with overlay - Red overlay that disappears on hover */}
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={project.image}
@@ -84,7 +83,7 @@ export default function ProjectsHome() {
                     <div className="p-2 bg-white rounded-lg text-amber-600">
                       {project.icon}
                     </div>
-                    <span className="px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full backdrop-blur-sm">
+                    <span className="px-3 py-1 text-xs font-semibold text-white bg-amber-600 rounded-full backdrop-blur-sm">
                       {project.category}
                     </span>
                   </div>
@@ -117,7 +116,7 @@ export default function ProjectsHome() {
           transition={{ delay: 0.6 }}
           className="text-center mt-16"
         >
-          <button className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+          <button className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
             View All Case Studies
           </button>
         </motion.div>

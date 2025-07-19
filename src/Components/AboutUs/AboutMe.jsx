@@ -30,16 +30,16 @@ export default function AboutMe() {
               viewport={{ once: true }}
             >
               <h2 className="text-5xl font-bold text-gray-900 mb-8">
-                About <span className="text-red-600">Us</span>
+                About <span className="text-amber-600">Us</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                <span className="font-semibold text-red-600">AllLegal Uzbekistan</span> stands as a premier legal advisor, providing exceptional 
-                and tailored legal services for businesses navigating complex international 
+                <span className="font-semibold text-amber-600">AllLegal Uzbekistan</span> stands as a premier legal advisor, providing exceptional 
+                and tailoamber legal services for businesses navigating complex international 
                 transactions, disputes, and engagements with governmental and international 
                 entities. With a team of ambitious, distinguished, and rising professionals, we 
                 leverage local knowledge and global experience to drive success for our clients. 
                 Our people are the foundation of our achievements, and we take{' '}
-                <span className="font-semibold text-red-600">great pride</span> in 
+                <span className="font-semibold text-amber-600">great pride</span> in 
                 fostering a culture of excellence and collaboration.
               </p>
             </motion.div>
@@ -59,10 +59,10 @@ export default function AboutMe() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Firm</h2>
-              <div className="w-16 h-1 bg-red-600 mb-6"></div>
+              <div className="w-16 h-1 bg-amber-600 mb-6"></div>
               <p className="text-gray-600">
                 <span className="block text-sm font-medium">Welcome to</span>
-                <span className="block text-lg font-semibold text-red-600">AllLegal Uzbekistan</span>
+                <span className="block text-lg font-semibold text-amber-600">AllLegal Uzbekistan</span>
               </p>
             </motion.div>
 
@@ -74,7 +74,7 @@ export default function AboutMe() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold text-red-600 mb-6">
+                <h3 className="text-2xl font-bold text-amber-600 mb-6">
                   Local Expertise, Global Reach
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -92,14 +92,14 @@ export default function AboutMe() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold text-red-600 mb-6">
+                <h3 className="text-2xl font-bold text-amber-600 mb-6">
                   Our Values and Approach
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   At PraeLegal Uzbekistan, we are dedicated to providing legal services of the highest quality, rooted in 
                   integrity, excellence, and client-focused solutions. Our approach combines deep legal expertise with 
                   practical business acumen, ensuring that every client receives personalized attention and strategic 
-                  guidance tailored to their unique needs and objectives.
+                  guidance tailoamber to their unique needs and objectives.
                 </p>
               </motion.div>
 

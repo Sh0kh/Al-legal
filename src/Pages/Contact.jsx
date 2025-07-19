@@ -55,7 +55,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-red-700 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-amber-700 mb-6 leading-tight">
               Biz bilan qanday<br />
               bog'lanish mumkin?
             </h1>
@@ -139,7 +139,7 @@ export default function ContactPage() {
         transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}
         className="fixed bottom-6 right-6 z-50"
       >
-        <div className="bg-red-600 hover:bg-red-700 p-4 rounded-full shadow-lg cursor-pointer transition-colors">
+        <div className="bg-amber-600 hover:bg-amber-700 p-4 rounded-full shadow-lg cursor-pointer transition-colors">
           <MessageCircle className="w-6 h-6 text-white" />
         </div>
       </motion.div>

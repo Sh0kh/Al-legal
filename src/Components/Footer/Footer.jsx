@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram, Facebook } from 'lucide-react';
@@ -11,12 +12,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#97252c] text-white pt-16 pb-8 px-6 overflow-hidden relative">
+    <footer className="bg-black text-white pt-16 pb-8 px-6 overflow-hidden relative">
       <div className="max-w-7xl mx-auto">
 
-       <ScrollingText/>
+       {/* <ScrollingText/> */}
 
-        {/* About section */}
+      
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -24,14 +25,17 @@ export default function Footer() {
           variants={fadeIn}
           className="mb-12"
         >
-          <div className="text-2xl font-bold mb-2">AllLegal Uzbekistan</div>
-          <div className="text-gray-300 text-lg">OUR MISSION — YOUR SUCCESS</div>
+       <div className="text-2xl font-bold mb-2 bg-amber-600 bg-clip-text text-transparent">
+  AllLegal Uzbekistan
+</div>
+
+          <div className="text-gray-300 text-lg text-bold" >OUR MISSION — YOUR SUCCESS</div>
         </motion.div>
 
         {/* Links */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-            <h3 className="text-lg font-semibold mb-4">About</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-amber-600 bg-clip-text text-transparent">About</h3>
             <NavLink to="/aboutus">
               
             
@@ -44,7 +48,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.1 }}>
-            <h3 className="text-lg font-semibold mb-4">Capabilities</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-amber-600 bg-clip-text text-transparent">Capabilities</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white transition">Practices</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition">Key Industries</a></li>
@@ -52,7 +56,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.2 }}>
-            <h3 className="text-lg font-semibold mb-4">Insights</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-amber-600 bg-clip-text text-transparent">Insights</h3>
         
 
             <ul className="space-y-2">
@@ -63,15 +67,14 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.3 }}>
-            <h3 className="text-lg font-semibold mb-4">Other</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-amber-600 bg-clip-text text-transparent">Other</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white transition">Recognition And Awards</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition">Client Success Stories</a></li>
             </ul>
           </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.4 }}>
-            <h3 className="text-lg font-semibold mb-4">Social Media</h3>
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.4 }}>
+            <h3 className="text-lg font-semibold mb-4 bg-amber-600 bg-clip-text text-transparent">Social Media</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition">
                 <Linkedin className="w-5 h-5" />
@@ -90,21 +93,21 @@ export default function Footer() {
         <div className="border-t border-gray-500 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="md:col-span-2">
-              <h3 className="text-lg font-semibold mb-2">Locations</h3>
+              <h3 className="text-lg font-semibold mb-2 bg-amber-600 bg-clip-text text-transparent">Locations</h3>
               <p className="text-gray-300">77 Bobur, Yakkasaroy Tashkent, 100022</p>
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.1 }}>
-              <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
+              <h3 className="text-lg font-semibold mb-2 bg-amber-600 bg-clip-text text-transparent">Contact Us</h3>
               <p className="text-gray-300">+998 95 198 21 12</p>
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} transition={{ delay: 0.2 }} className="md:text-right">
-              <div className="text-gray-300 text-sm">©2025 Prael.egal Uzbekistan</div>
+              <div className="text-gray-300 text-sm bg-amber-600 bg-clip-text text-transparent">©2025 Prael.egal Uzbekistan</div>
               <div className="flex flex-wrap justify-end gap-x-4 gap-y-2 mt-2">
-                <a href="#" className="text-gray-300 hover:text-white text-sm transition">Privacy & Cookies</a>
-                <a href="#" className="text-gray-300 hover:text-white text-sm transition">Disclaimers</a>
-                <a href="#" className="text-gray-300 hover:text-white text-sm transition">Cepsyn.ecr.com</a>
+                <a href="#" className="text-gray-300 hover:text-white text-sm transition bg-amber-600 bg-clip-text text-transparent">Privacy & Cookies</a>
+                <a href="#" className="text-gray-300 hover:text-white text-sm transition bg-amber-600 bg-clip-text text-transparent">Disclaimers</a>
+
               </div>
             </motion.div>
           </div>
@@ -122,5 +125,5 @@ export default function Footer() {
         }
       `}</style>
     </footer>
-  );
+  )
 }

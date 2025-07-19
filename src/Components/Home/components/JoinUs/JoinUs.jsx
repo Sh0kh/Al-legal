@@ -23,10 +23,10 @@ export default function JoinUs() {
         {/* Left Text and Quotes */}
         <div className="relative z-10">
           <h2 className="text-4xl font-semibold text-gray-800 mb-4">Join Us</h2>
-          <div className="w-24 h-1 bg-red-600 mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 mb-6" />
           <p className="text-lg text-gray-500">
             Looking for a career at <br />
-            <span className="text-red-600 font-medium">AllLegal Uzbekistan?</span>
+            <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent font-medium">AllLegal Uzbekistan?</span>
           </p>
 
           <div className="gooo mt-8">
@@ -89,7 +89,7 @@ export default function JoinUs() {
 
           <motion.button
             whileTap={{ scale: 0.97 }}
-            className="w-full bg-[#971d26] hover:bg-[#7d121a] transition-colors duration-300 text-white font-semibold py-3 rounded-md flex items-center justify-center gap-2"
+            className="w-full bg-black hover:bg-black transition-colors duration-300 text-white font-semibold py-3 rounded-md flex items-center justify-center gap-2"
           >
             <Send size={20} />
             Send

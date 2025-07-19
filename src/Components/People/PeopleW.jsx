@@ -31,7 +31,7 @@ export default function PeopleW(){
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-red-700 mb-4">
+          <h1 className="text-5xl font-bold text-amber-700 mb-4">
             Bizning jamoamiz
           </h1>
         </div>

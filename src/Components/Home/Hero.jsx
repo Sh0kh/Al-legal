@@ -69,16 +69,16 @@ export default function Hero() {
               }`}
             >
               <div className="flex items-center space-x-3 mb-6">
-                <Scale className="w-9 h-9 text-red-600 drop-shadow-lg" />
-                <span className="text-base font-semibold text-red-600 tracking-widest uppercase">AllLegal</span>
+                <Scale className="w-9 h-9 text-amber-600 drop-shadow-lg" />
+                <span className="text-base font-semibold text-amber-600 tracking-widest uppercase">AllLegal</span>
               </div>
               <h1 className="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight drop-shadow-xl">
                 Huquqiy Masalalarda{' '}
-                <span className="text-transparent bg-clip-text bg-red-600 via-amber-500 to-amber-700 animate-gradient-move">
+                <span className="text-transparent bg-clip-text bg-amber-600 via-amber-500 to-amber-700 animate-gradient-move">
                   Professional Yordam
                 </span>
               </h1>
-              <div className="w-28 h-1 bg-red-600 to-amber-700 mt-7 rounded-full"></div>
+              <div className="w-28 h-1 bg-amber-600 to-amber-700 mt-7 rounded-full"></div>
             </div>
 
             <div
@@ -97,7 +97,7 @@ export default function Hero() {
               }`}
             >
               <div className="flex flex-col sm:flex-row gap-5 pt-4">
-                <button className="bg-red-600 hover:red-400 hover:to-amber-800 text-white px-10 py-4 font-bold rounded-xl transition-all duration-300 hover:shadow-amber-500/30 shadow-lg flex items-center space-x-2 text-lg">
+                <button className="bg-amber-600 hover:amber-400 hover:to-amber-800 text-white px-10 py-4 font-bold rounded-xl transition-all duration-300 hover:shadow-amber-500/30 shadow-lg flex items-center space-x-2 text-lg">
                   <Briefcase className="w-6 h-6" />
                   <span>Konsultatsiya Olish</span>
                 </button>

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function ScrollingText() {
   return (
-    <div className="w-full overflow-hidden bg-[#97252c] py-8">
+    <div className="w-full overflow-hidden bg-black  py-8">
       <div className="relative flex whitespace-nowrap animate-marquee-fast">
-        <span className="text-4xl md:text-6xl font-bold text-white mx-10">
+        <span className="text-4xl md:text-6xl font-bold text-white mx-10 ">
           Our Mission — Your Success  Our Mission — Your Success  Our Mission — Your Success  Our Mission — Your Success 
         </span>
         <span className="text-4xl md:text-6xl font-bold text-white mx-10">

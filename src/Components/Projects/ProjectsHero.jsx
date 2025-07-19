@@ -35,12 +35,12 @@ export default function ProjectsHero() {
           >
             <h1 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
               AllLegal<br />
-              <span className="text-red-600">Uzbekistan</span>
+              <span className="text-amber-600">Uzbekistan</span>
             </h1>
             <div className="flex items-center space-x-8 mb-12">
               <div className="flex items-center space-x-4">
                 <span className="text-white font-medium">About</span>
-                <div className="w-12 h-0.5 bg-red-600"></div>
+                <div className="w-12 h-0.5 bg-amber-600"></div>
                 <span className="text-white font-medium">Projetcs</span>
               </div>
             </div>

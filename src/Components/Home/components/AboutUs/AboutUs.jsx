@@ -54,21 +54,21 @@ export default function AboutUs() {
           className="mb-16"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-4">About Us</h1>
-          <div className="w-24 h-1 bg-red-600 mb-8"></div>
+          <div className="w-24 h-1 bg-amber-600 mb-8"></div>
           <p className="text-gray-600 max-w-2xl">
-            Welcome to <span className="text-red-600 font-semibold">AllLegal Uzbekistan</span>
+            Welcome to <span className="text-amber-600 font-semibold">AllLegal Uzbekistan</span>
           </p>
           <div className="mt-8 flex justify-start space-x-8 text-sm text-gray-700">
             <span className="flex items-center">
-              <Award className="w-4 h-4 mr-1 text-red-600" />
+              <Award className="w-4 h-4 mr-1 text-amber-600" />
               JUSTICE
             </span>
             <span className="flex items-center">
-              <Users className="w-4 h-4 mr-1 text-red-600" />
+              <Users className="w-4 h-4 mr-1 text-amber-600" />
               EXPERTISE
             </span>
             <span className="flex items-center">
-              <TrendingUp className="w-4 h-4 mr-1 text-red-600" />
+              <TrendingUp className="w-4 h-4 mr-1 text-amber-600" />
               RESULTS
             </span>
           </div>
@@ -81,8 +81,8 @@ export default function AboutUs() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-600">
-              <h2 className="text-3xl font-bold text-red-600 mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-amber-600">
+              <h2 className="text-3xl font-bold text-amber-600 mb-4">
                 AllLegal Uzbekistan: Law That Moves Global Business Forward
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -94,7 +94,7 @@ export default function AboutUs() {
                 Our team blends elite legal talent with deep local insight and global perspective.
                 We build tailored legal strategies that align with your business goals.
               </p>
-              <p className="text-red-600 font-semibold">
+              <p className="text-amber-600 font-semibold">
                 In every case, our mission is clear: deliver results, protect your interests, and drive your advantage.
               </p>
             </div>
@@ -113,7 +113,7 @@ export default function AboutUs() {
                   transition={{ delay: 0.4 + idx * 0.2 }}
                   className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
                 >
-                  <div className="text-4xl font-bold text-red-600 mb-2">{item.value}</div>
+                  <div className="text-4xl font-bold text-amber-600 mb-2">{item.value}</div>
                   <div className="text-gray-600 text-sm">{item.label}</div>
                 </motion.div>
               ))}
@@ -134,7 +134,7 @@ export default function AboutUs() {
               </div>
 
               <div className="absolute bottom-8 right-8 bg-white rounded-lg px-4 py-2 shadow-lg">
-                <div className="text-red-600 font-bold text-sm">AllLegal</div>
+                <div className="text-amber-600 font-bold text-sm">AllLegal</div>
                 <div className="text-gray-600 text-xs">Uzbekistan</div>
               </div>
 
@@ -144,13 +144,13 @@ export default function AboutUs() {
             </div>
 
             <div className="mt-8 grid grid-cols-1 gap-4">
-              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-600">
+              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-amber-600">
                 <h4 className="font-bold text-gray-900 mb-2">Global Reach</h4>
                 <p className="text-gray-600 text-sm">
                   Strategic partnerships across multiple jurisdictions for comprehensive legal solutions.
                 </p>
               </div>
-              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-600">
+              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-amber-600">
                 <h4 className="font-bold text-gray-900 mb-2">Local Expertise</h4>
                 <p className="text-gray-600 text-sm">
                   Deep understanding of Uzbekistan's legal landscape and business environment.
