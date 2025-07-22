@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Paperclip, Send } from 'lucide-react';
+import { Send, Briefcase, Star, ScrollText } from 'lucide-react';
 
 export default function JoinUs() {
   const [formData, setFormData] = useState({
@@ -18,84 +18,99 @@ export default function JoinUs() {
   };
 
   return (
-    <section className="relative bg-[#f9f9f9] py-16 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Left Text and Quotes */}
-        <div className="relative z-10">
-          <h2 className="text-4xl font-semibold text-gray-800 mb-4">Join Us</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 mb-6" />
-          <p className="text-lg text-gray-500">
-            Looking for a career at <br />
-            <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent font-medium">AllLegal Uzbekistan?</span>
-          </p>
+    <section className="relative min-h-screen bg-[#f9f9f9] flex items-center justify-center px-4 py-20 overflow-hidden">
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute top-10 text-center w-full z-20"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+          Join Us at <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400">AllLegal</span>
+        </h1>
+        
+      </motion.div>
 
-          <div className="gooo mt-8">
-          </div>
-        </div>
-
-        {/* Form Section */}
-        <div className="bg-white shadow-md border border-gray-200 p-8 rounded-xl relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className="px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <select
-              name="helpText"
-              value={formData.helpText}
-              onChange={handleChange}
-              className="px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-            >
-              <option>Help me find</option>
-              <option>Legal Internship</option>
-              <option>Associate Position</option>
-              <option>Research Role</option>
-            </select>
-            <select
-              name="opportunities"
-              value={formData.opportunities}
-              onChange={handleChange}
-              className="px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-            >
-              <option>Opportunities in</option>
-              <option>Litigation</option>
-              <option>Corporate Law</option>
-              <option>Tax & Finance</option>
-            </select>
-          </div>
-
-          <textarea
-            name="message"
-            placeholder="Attach a link to your CV (Google Doc, Google Drive) and send us a message."
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md h-24 mb-6 focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            className="w-full bg-black hover:bg-black transition-colors duration-300 text-white font-semibold py-3 rounded-md flex items-center justify-center gap-2"
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-6 z-10">
+        {[Briefcase, Star, ScrollText].map((Icon, idx) => (
+          <motion.div
+            key={idx}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ repeat: Infinity, duration: 2 + idx }}
+            className="bg-white shadow-md p-3 rounded-full border border-gray-200"
           >
-            <Send size={20} />
-            Send
-          </motion.button>
-        </div>
+            <Icon className="text-yellow-500" />
+          </motion.div>
+        ))}
       </div>
+
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="bg-white rounded-2xl shadow-xl border border-gray-100 p-10 w-full max-w-2xl z-10"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <select
+            name="helpText"
+            value={formData.helpText}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+          >
+            <option disabled>Help me find</option>
+            <option>Legal Internship</option>
+            <option>Associate Position</option>
+            <option>Research Role</option>
+          </select>
+          <select
+            name="opportunities"
+            value={formData.opportunities}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+          >
+            <option disabled>Opportunities in</option>
+            <option>Litigation</option>
+            <option>Corporate Law</option>
+            <option>Tax & Finance</option>
+          </select>
+        </div>
+
+        <textarea
+          name="message"
+          placeholder="Attach a link to your CV and leave a message..."
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg h-28 mb-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+        />
+
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          whileHover={{ scale: 1.02 }}
+          className="w-full bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 shadow-md transition"
+        >
+          <Send size={20} />
+          Send
+        </motion.button>
+      </motion.div>
     </section>
   );
 }
