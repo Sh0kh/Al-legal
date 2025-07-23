@@ -7,8 +7,6 @@ export default function JoinUs() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    helpText: '',
-    opportunities: '',
     message: '',
   });
 
@@ -26,9 +24,11 @@ export default function JoinUs() {
         className="absolute top-10 text-center w-full z-20"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-          Join Us at <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400">AllLegal</span>
+          Join Us at{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400">
+            AllLegal
+          </span>
         </h1>
-        
       </motion.div>
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-6 z-10">
@@ -50,53 +50,26 @@ export default function JoinUs() {
         transition={{ duration: 1, delay: 0.3 }}
         className="bg-white rounded-2xl shadow-xl border border-gray-100 p-10 w-full max-w-2xl z-10"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
-          />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-          <select
-            name="helpText"
-            value={formData.helpText}
-            onChange={handleChange}
-            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
-          >
-            <option disabled>Help me find</option>
-            <option>Legal Internship</option>
-            <option>Associate Position</option>
-            <option>Research Role</option>
-          </select>
-          <select
-            name="opportunities"
-            value={formData.opportunities}
-            onChange={handleChange}
-            className="px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
-          >
-            <option disabled>Opportunities in</option>
-            <option>Litigation</option>
-            <option>Corporate Law</option>
-            <option>Tax & Finance</option>
-          </select>
-        </div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border my-[20px] border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
+        />
 
         <textarea
           name="message"
-          placeholder="Attach a link to your CV and leave a message..."
+          placeholder="Description..."
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-200 rounded-lg h-28 mb-6 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:scale-[1.01]"
